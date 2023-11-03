@@ -15,10 +15,6 @@ public class OrderPageAboutRent {
     //Календарь поля когда привезти самокат
     private final By rentDayCalendar = By.className("react-datepicker__month-container");
 
-    //День в календаре
-    //private final By rentDateValue = By.className("react-datepicker__day");
-
-
     //Поле срока аренды
     private final By rentPeriodField = By.xpath(".//div[text() = '* Срок аренды']");
     //Выпадающий список с выбором срока аренды

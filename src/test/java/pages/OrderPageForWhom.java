@@ -35,12 +35,17 @@ public class OrderPageForWhom {
     private final By phoneNumberField = By.xpath(".//input[contains(@placeholder, 'Телефон: на него позвонит курьер')]");
     //Кнопка "Далее" вкладки "Для кого самокат"
     private final By nextButton = By.xpath(".//button[contains(text(), 'Далее')]");
+    private By formOrderFields = By.className("Order_Content__bmtHS");
+
+    public By getFormOrderFields() {
+        return formOrderFields;
+    }
 
     public OrderPageForWhom(WebDriver driver) {
         this.driver = driver;
     }
     //Нажимаем на кнопку с куки
-    public void CookieButtonClick() {
+    public void сookieButtonClick() {
         driver.findElement(cookieButton).click();
     }
 
@@ -90,7 +95,7 @@ public class OrderPageForWhom {
 
     //Вводим контактные данные для заказа и нажимаем кнопку "Далее"
     public void fillForWhomOrderPage(int scenario, String name, String surname, String address, int station, String phoneNumber) {
-        CookieButtonClick();
+        сookieButtonClick();
         orderButtonClick(scenario);
         setName(name);
         setSurname(surname);
